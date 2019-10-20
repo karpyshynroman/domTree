@@ -27,7 +27,7 @@ function createTreeHelper(dataVar) {
     Object.keys(dataVar).forEach(item => {
         const li = document.createElement('li');
         li.textContent = item;
-        if (createTreeHelper(dataVar[item])){           //check if not undefined
+        if (createTreeHelper(dataVar[item])){
             li.append(createTreeHelper(dataVar[item]));
         }
         ul.append(li);
